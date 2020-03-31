@@ -1,0 +1,151 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#sartChart {
+  margin: 0;
+  height: 380px;
+  width: 100%;
+  resize: vertical;
+  box-shadow: 5px 5px 5px #eee;
+  background-color: #fff;
+  border: 1px solid #eee;
+  display: flex;
+  flex-flow: column wrap;
+  padding-top: 0px;
+}
+
+.select--container {
+	display: flex; 
+	align-items: center;
+	justify-content: center;
+	background: rgb(224, 223, 199);
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 1px solid black;
+}
+
+.controls--container {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  background: rgb(41, 95, 156);
+}
+
+.controls--container button {
+  margin: 10px;
+  margin-left: 40px;
+  padding: 4px;
+  padding-right: 8px;
+  padding-left : 8px;
+  background-color: rgb(23, 56, 94);
+  /*border: none;*/
+  border-width: 0 0 2px 0;
+  color: #fff;
+  box-shadow: 4px 4px 4px #eee;
+  font-size: 14px;
+  font-family: Roboto;
+  cursor: pointer;
+  transition: .1s;
+}
+
+.controls--container button:hover {
+	color: rgb(248, 248, 145);
+  	opacity: .9;
+}
+
+/*button movement*/
+ .controls--container button:active {
+  border-width: 0 0 2px 0;
+  transform: translateY(5px);
+  opacity: 0.9;
+}
+
+.controls--container button:disabled {
+	border-width: 0 0 0px 0;
+	box-shadow: 1px 1px 1px #eee;
+	color: grey;
+	opacity: 0.9;
+	cursor: default;
+  }
+  
+.tags--container {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto;
+	/*flex-direction: row;
+	align-items: center;*/
+	justify-content: center;
+	/*background-color: rgb(202, 204, 172);*/
+}
+
+input[type="checkbox"]:checked + label {
+	color: back;
+	font-size: 12px;
+    font-weight: bold;
+    background: rgb(255, 255, 255);
+}
+input[type="checkbox"]:not(:checked) + label {
+	color: back;
+	font-size: 12px;
+    font-weight: normal;
+    background: rgb(255, 255, 255);
+}
+
+/* starts with   ^= */
+input[type="checkbox"]:checked + label[for^=red] {
+    color: #ffffff;
+    font-weight: bold;
+	background: red;
+	
+}
+
+.checkboxes {
+	columns: 5 8em;   /* numero de colunas de tags na pagina */
+	list-style-type:none;
+	justify-items: center;
+	justify-content: center;
+}
+
+.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+	visibility: hidden;
+	width: 120px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 150%;
+	left: 50%;
+	margin-left: -60px;
+  }
+  
+  .tooltip .tooltiptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: black transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+	visibility: visible;
+  }  
+.zc-ref {
+  display: none;
+}
